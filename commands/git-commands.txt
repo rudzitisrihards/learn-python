@@ -1,0 +1,6 @@
+
+mkdir my-python-project
+
+git add .
+git commit -m "commit message"
+git push origin main
