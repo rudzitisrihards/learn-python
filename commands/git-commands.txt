@@ -4,3 +4,42 @@ mkdir my-python-project
 git add .
 git commit -m "commit message"
 git push origin main
+
+---
+
+- Check current branch and status
+git status
+
+- Start a new branch locally
+git checkout -b branch-name
+
+- Reset files to their originals
+git restore filename.php
+
+- Stage
+git add .
+
+- Commit
+git commit -m "commit message"
+
+- Push
+git push origin branch-name
+
+- Delete a branch locally
+git branch -d branch-name
+
+- Push changes about a deleted branch
+git push origin --delete branch-name
+
+List branches in repository
+git branch -a
+
+- Fetch the latest main
+git checkout main
+git fetch origin
+
+- If you want to work on a branch that you have locally
+git checkout branch-name
+
+- If you want to work on a repository branch that you don't have locally
+git checkout -b branch-name origin/branch-name
