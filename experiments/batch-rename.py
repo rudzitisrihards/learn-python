@@ -5,6 +5,8 @@ def batch_rename_files(folder_path, base_name):
         # Izveido masīvu ar visiem failu nosaukumiem un sakārto alfabētiski
         files = sorted(os.listdir(folder_path))
 
+        files_amount_in_folder = len(files)
+
         # Iesāk kaunteri
         counter = 1
 
@@ -29,6 +31,8 @@ def batch_rename_files(folder_path, base_name):
             # Pārsauc failu
             os.rename(old_path, new_path)
             print(f"File {filename} renamed to {new_name} successfully.")
+
+        return counter -1, files_amount_in_folder # funkcija atgriež vērtības par to cik faili bija folderī un cik ir nomainīti
     
     except FileNotFoundError:
         print(f"Folder {folder_path} not found.")
@@ -49,7 +53,15 @@ def get_user_inputs():
         print("Batch renaming cancelled!")
         exit()
 
+# global scope
+
 if __name__ == "__main__": # kods zem šīs rindas izpildīsies tikai no šī dokumenta, bet ne tad, ja to importēs citā dokumentā kā moduli
     print("This is a script for batch renaming all files in a folder!")
+
+    # nodefinē global scope mainīgos no user input funkcijas atgrieztajām vērtībām
     folder_path, base_name = get_user_inputs()
-    batch_rename_files(folder_path, base_name)
+
+    # izsauc galveno funkciju un paņem funkcijas atgrieztās vērtības uz global scope
+    files_renamed, total_files = batch_rename_files(folder_path, base_name) 
+    
+    print(f"Renamed {files_renamed} out of {total_files} files successfully!")
