@@ -50,6 +50,6 @@ def get_user_inputs():
         exit()
 
 if __name__ == "__main__": # kods zem šīs rindas izpildīsies tikai no šī dokumenta, bet ne tad, ja to importēs citā dokumentā kā moduli
-    print("This is a script for batch renaming files in a folder!")
+    print("This is a script for batch renaming all files in a folder!")
     folder_path, base_name = get_user_inputs()
     batch_rename_files(folder_path, base_name)
