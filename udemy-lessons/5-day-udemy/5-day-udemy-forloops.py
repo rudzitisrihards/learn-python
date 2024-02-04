@@ -5,6 +5,9 @@ import time
 # for item in list_of_items:
 #    do something to each item
 
+# for number ir range(a,b):
+#     do something to the number
+
 
 fruits = ["Apple", "Peach", "Pear"]
 for item in fruits:
