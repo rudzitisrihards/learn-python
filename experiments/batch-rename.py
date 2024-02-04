@@ -53,9 +53,11 @@ def get_user_inputs():
         print("Batch renaming cancelled!")
         exit()
 
+
 # global scope
 
 if __name__ == "__main__": # kods zem šīs rindas izpildīsies tikai no šī dokumenta, bet ne tad, ja to importēs citā dokumentā kā moduli
+
     print("This is a script for batch renaming all files in a folder!")
 
     # nodefinē global scope mainīgos no user input funkcijas atgrieztajām vērtībām
