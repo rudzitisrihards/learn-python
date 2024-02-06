@@ -5,7 +5,9 @@ mkdir my-python-project
 git fetch origin main
 git merge origin/main
 
-or git pull origin main
+or 
+
+git pull origin main
 
 
 git add .
